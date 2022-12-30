@@ -21,12 +21,14 @@ function  makeGrid(value){
 makeGrid(16);
 
 
+
 //Changes the size of the board
 function changeSize(value){
     if (value >= 2 && value <= 100){
         makeGrid(value);
     }
 }
+
 
 
 //Changes the color of the pen
@@ -40,7 +42,8 @@ function changeColor(choice){
 }
 
 
-//If clicks, the pen works, if unclick, it does not
+
+//If clicks, the pen works, if unclick, it does not (It can be improved for UI)
 document.querySelector('#container').addEventListener('mousedown', () => {
     click = !click;
 })
@@ -53,12 +56,3 @@ function clearBoard(){
         board.style.backgroundColor = "white";
     })
 }
-
-
-
-//To get all buttons with their respective color
-const colorBtns = document.querySelectorAll('.colorButton');
-colorBtns.forEach((btn) => {
-    btn.style.backgroundColor = btn.textContent;
-    btn.style.color = btn.textContent;
-})
