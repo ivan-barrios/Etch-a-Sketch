@@ -4,9 +4,31 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Etch-a-Sketch</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <h1 class="title">Etch-a-Sketch</h1>
+    <div class="board">
+        <div id="container"></div>
+        <div class="btnContainer">
+            <button class="colorButton" onclick="changeColor('black')">Black</button>
+            <button class="colorButton" onclick="changeColor('red')">Red</button>
+            <button class="colorButton" onclick="changeColor('blue')">Blue</button>
+            <button class="colorButton" onclick="changeColor('green')">Green</button>
+            <button class="colorButton" onclick="changeColor('yellow')">Yellow</button>
+            <button class="colorButton" onclick="changeColor('white')">Erasor</button>
+        </div>
+    </div>
+    <div>
+        <button onclick="clearBoard()">Clear Board</button>
+        <input 
+        type="text" 
+        placeholder="Set Size of Board" 
+        value="16" 
+        onchange="changeSize(this.value)">
+        <button>Change Size</button>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
