@@ -1,12 +1,13 @@
+
 body{
     background-image: url("../Etch-a-Sketch/images/paperImgForBackground.jpg");
     background-color: beige;
 }
 
-
+/**/
 #board{
-    width: 500px;
-    height: 500px;
+    width: 700px;
+    height: 700px;
     display: grid;
     padding-left: 100px;
 }
@@ -19,17 +20,21 @@ body{
 
 .container{
     display: flex;
-    flex-direction: row-reverse;
     align-items: center;
     justify-content: center;
+    gap: 100px;
 }
 
 .settings{
+    height: 700px;
+    width: 400px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 2em;
+    gap: 4em;
+    border: 3px solid black;
+    border-radius: 20px;
 }
 
 .colorPicker{
@@ -60,5 +65,5 @@ input[type='color']::-webkit-color-swatch-wrapper {
 input[type='color']::-webkit-color-swatch {
   border: none;
   border-radius: 50px;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  box-shadow: rgba(0, 0, 0, 1) 0px 4px 10px;
 }
