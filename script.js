@@ -1,21 +1,19 @@
 let color = "black";
 let click = false;
 
-
-
 //CREATES GRID
-const container = document.getElementById('container');
+const board = document.getElementById('board');
 function  makeGrid(value){
     let items = document.querySelectorAll('.grid-item');
     items.forEach((div) => div.remove());
-    container.style.gridTemplateColumns = `repeat(${value}, 1fr)`;
-    container.style.gridTemplateRows = `repeat(${value}, 1fr)`;
+    board.style.gridTemplateColumns = `repeat(${value}, 1fr)`;
+    board.style.gridTemplateRows = `repeat(${value}, 1fr)`;
     let amount = value * value;
     for (let i = 0; i < (amount); i++){
         let item = document.createElement('div');
         item.addEventListener('mouseover', colorGridItem)
         item.style.backgroundColor = "white"
-        container.appendChild(item).className = "grid-item";
+        board.appendChild(item).className = "grid-item";
     }
 }
 makeGrid(16);
@@ -44,12 +42,12 @@ function changeColor(choice){
 
 
 //If clicks, the pen works, if unclick, it does not (It can be improved for UI)
-document.querySelector('#container').addEventListener('mousedown', () => {
+document.querySelector('#board').addEventListener('mousedown', () => {
     click = !click;
 })
 
 
-
+//Clears the board
 function clearBoard(){
     let board = document.querySelectorAll('.grid-item');
     board.forEach((board) => {

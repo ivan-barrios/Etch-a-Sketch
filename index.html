@@ -9,28 +9,24 @@
 </head>
 <body>
     <h1 class="title">Etch-a-Sketch</h1>
-    <div class="board">
-        <div id="container"></div>
-        <input class="colorPicker" type="color" onchange="changeColor(this.value)">
-        <!--
-        <div class="btnContainer">
-            <button class="colorButton" onclick="changeColor('black')">Black</button>
-            <button class="colorButton" onclick="changeColor('red')">Red</button>
-            <button class="colorButton" onclick="changeColor('blue')">Blue</button>
-            <button class="colorButton" onclick="changeColor('green')">Green</button>
-            <button class="colorButton" onclick="changeColor('yellow')">Yellow</button>
-            <button class="colorButton" onclick="changeColor('white')">Erasor</button>
+    <div class="container">
+        <div id="board"></div>
+        <div class="settings">
+            <input
+            class="colorPicker" 
+            type="color"
+            onchange="changeColor(this.value)">
+            <button onclick="changeColor('white')">Eraser</button>
+            <button onclick="clearBoard()">Clear Board</button>
+            <div class="change-size-container">
+                <input 
+                type="text" 
+                placeholder="Set Size of Board" 
+                value="16" 
+                onchange="changeSize(this.value)">
+                <button>Change Size</button>
+            </div>
         </div>
-    -->
-    </div>
-    <div>
-        <button onclick="clearBoard()">Clear Board</button>
-        <input 
-        type="text" 
-        placeholder="Set Size of Board" 
-        value="16" 
-        onchange="changeSize(this.value)">
-        <button>Change Size</button>
     </div>
     <script src="script.js"></script>
 </body>
